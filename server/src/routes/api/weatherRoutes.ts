@@ -10,7 +10,7 @@ router.post('/', (req: Request, res: Response) => {
   try {
     const cityName = req.body.cityName;
 
-    weatherService.getWeatherForCity(cityName).then((data) => {
+    WeatherService.getWeatherForCity(cityName).then((data) => {
   // TODO: save city to search history
       HistoryService.addCity(cityName);
       res.json(data);
